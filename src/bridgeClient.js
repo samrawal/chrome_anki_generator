@@ -1,5 +1,5 @@
 export const CODEX_BRIDGE_URL = "http://127.0.0.1:4555/generate-cloze";
-export const BRIDGE_START_COMMAND = "npm run bridge";
+export const BRIDGE_START_COMMAND = "npm start";
 
 export async function generateClozeCard(pageCapture, options = {}) {
   const {

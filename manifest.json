@@ -10,7 +10,6 @@
     "128": "assets/icon128.png"
   },
   "action": {
-    "default_popup": "popup.html",
     "default_icon": {
       "16": "assets/icon16.png",
       "32": "assets/icon32.png",
@@ -19,6 +18,28 @@
     },
     "default_title": "Create Anki cloze"
   },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mksap.acponline.org/app/*"],
+      "js": ["src/contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/icon16.png",
+        "assets/icon32.png",
+        "assets/icon48.png",
+        "assets/icon128.png"
+      ],
+      "matches": ["https://mksap.acponline.org/*"]
+    }
+  ],
   "permissions": ["activeTab", "scripting", "clipboardWrite"],
   "host_permissions": [
     "https://mksap.acponline.org/app/*",

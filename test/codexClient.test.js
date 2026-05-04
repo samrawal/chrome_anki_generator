@@ -33,6 +33,8 @@ describe("CodexAppServerClient", () => {
     const turnStart = socket.nextSent();
     assert.equal(turnStart.method, "turn/start");
     assert.equal(turnStart.params.threadId, "thread-1");
+    assert.equal(turnStart.params.model, "gpt-5.5");
+    assert.equal(turnStart.params.effort, "xhigh");
     assert.equal(turnStart.params.approvalPolicy, "never");
     assert.deepEqual(turnStart.params.sandboxPolicy, { type: "readOnly" });
     assert.equal(turnStart.params.input[0].type, "text");

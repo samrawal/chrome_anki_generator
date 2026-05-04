@@ -2,6 +2,8 @@ import { buildClozePrompt, extractClozeFromAgentText } from "./prompt.js";
 
 export const CODEX_APP_SERVER_URL = "ws://127.0.0.1:4500";
 export const CODEX_START_COMMAND = "codex app-server --listen ws://127.0.0.1:4500";
+export const CODEX_MODEL = "gpt-5.5";
+export const CODEX_REASONING_EFFORT = "xhigh";
 
 const CLIENT_INFO = {
   name: "mksap_anki_chrome_extension",
@@ -109,6 +111,8 @@ export class CodexAppServerClient {
     try {
       await this.request("turn/start", {
         threadId,
+        model: CODEX_MODEL,
+        effort: CODEX_REASONING_EFFORT,
         input: [{ type: "text", text: prompt }],
         approvalPolicy: "never",
         sandboxPolicy: { type: "readOnly" },

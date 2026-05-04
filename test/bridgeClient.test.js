@@ -40,7 +40,7 @@ describe("bridgeClient.generateClozeCard", () => {
             }
           }
         ),
-      /Start it with: npm run bridge/
+      /Start it with: npm start/
     );
   });
 

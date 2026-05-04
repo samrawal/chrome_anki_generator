@@ -4,11 +4,11 @@ A minimal Chrome extension that reads the current MKSAP answer page and asks loc
 
 ## What It Does
 
-- Runs from the Chrome toolbar popup on `https://mksap.acponline.org/app/`.
+- Opens as a bottom-right panel on `https://mksap.acponline.org/app/`.
 - Captures the page with `document.body.innerText`.
 - Sends the captured text to a local bridge at `http://127.0.0.1:4555`.
 - The bridge talks to the local Codex app-server.
-- Displays one generated cloze card in the popup.
+- Automatically generates one cloze card when the panel first opens.
 - Provides a one-click `Copy` button for pasting into Anki.
 
 v1 is copy-only. It does not import directly into Anki.
@@ -36,10 +36,21 @@ Press `Ctrl-C` in that terminal to stop both. Browser-originated WebSocket reque
 1. Open `chrome://extensions`.
 2. Enable `Developer mode`.
 3. Click `Load unpacked`.
-4. Select this folder: `/Users/samrawal/Documents/workspace/workspace-local/mksap_anki`.
+4. Select this repository folder.
 5. Open an MKSAP answer page at `https://mksap.acponline.org/app/`.
 6. In this repo, run `npm start`.
-7. Click the extension icon and choose `Generate cloze`.
+7. Click the extension icon to show or hide the bottom-right panel.
+8. The first cloze generates automatically; click `Generate cloze` again only when you want a fresh card.
+
+## Bridge Origin Policy
+
+The local bridge allows requests without a browser `Origin` header, such as local health checks. Browser-originated requests are limited to Chrome extension origins by default.
+
+For stricter local use, set an exact comma-separated allowlist before starting the bridge:
+
+```sh
+ALLOWED_ORIGINS=chrome-extension://your-extension-id npm start
+```
 
 ## Privacy
 
