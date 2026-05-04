@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "MKSAP Anki Cloze",
+  "version": "0.1.0",
+  "description": "Generate one Anki cloze card from the current MKSAP answer page using local Codex app-server.",
+  "icons": {
+    "16": "assets/icon16.png",
+    "32": "assets/icon32.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "32": "assets/icon32.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    },
+    "default_title": "Create Anki cloze"
+  },
+  "permissions": ["activeTab", "scripting", "clipboardWrite"],
+  "host_permissions": [
+    "https://mksap.acponline.org/app/*",
+    "http://127.0.0.1:4555/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' http://127.0.0.1:4555"
+  }
+}

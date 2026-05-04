@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title>MKSAP Anki Cloze icon</title>
+  <desc>A bright teal flashcard icon with a bold Anki-style A and cloze highlight.</desc>
+  <defs>
+    <linearGradient id="bg" x1="18" y1="14" x2="110" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#25c8cf"/>
+      <stop offset="0.54" stop-color="#13a982"/>
+      <stop offset="1" stop-color="#207557"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#07574c" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <path
+    d="M17 45C24 26 40 16 61 16c23 0 41 10 52 30-11-9-26-14-45-14-21 0-38 5-51 13Z"
+    fill="#ffffff"
+    opacity="0.18"
+  />
+  <rect x="23" y="31" width="82" height="74" rx="17" fill="#07584f" opacity="0.2"/>
+
+  <circle cx="94" cy="30" r="15" fill="#ffd166"/>
+  <path d="M94 21v18M85 30h18" stroke="#0f6d60" stroke-width="5" stroke-linecap="round"/>
+
+  <path
+    d="M57.8 38h12.8l24.6 55H80.8l-3.7-9.5H50.8L47.2 93H33.1L57.8 38Zm-3.5 34.3h18.9l-9.5-24.9-9.4 24.9Z"
+    fill="#07584f"
+    opacity="0.24"
+    transform="translate(0 4)"
+  />
+  <path
+    d="M57.8 38h12.8l24.6 55H80.8l-3.7-9.5H50.8L47.2 93H33.1L57.8 38Zm-3.5 34.3h18.9l-9.5-24.9-9.4 24.9Z"
+    fill="#f7fffb"
+  />
+
+  <rect x="39" y="93" width="50" height="10" rx="5" fill="#ff8a5c"/>
+  <rect x="49" y="93" width="30" height="10" rx="5" fill="#ffd166"/>
+</svg>

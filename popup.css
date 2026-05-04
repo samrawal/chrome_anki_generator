@@ -1,0 +1,132 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-size: 14px;
+  color: #18202c;
+  background: #f7f8f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 380px;
+  min-height: 320px;
+  margin: 0;
+  background: #f7f8f5;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+.popup-shell {
+  display: flex;
+  min-height: 320px;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.status-text {
+  margin: 0;
+  color: #5d6675;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.message {
+  border: 1px solid #d7dacf;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #384050;
+  padding: 9px 10px;
+  line-height: 1.4;
+}
+
+.message.error {
+  border-color: #e0b4a8;
+  background: #fff7f4;
+  color: #7a2f22;
+}
+
+.message.success {
+  border-color: #b7d4bf;
+  background: #f3fbf5;
+  color: #245b35;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+button {
+  min-height: 36px;
+  border: 1px solid #bac2bd;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #18202c;
+  cursor: pointer;
+  font-weight: 650;
+}
+
+button:hover:not(:disabled) {
+  border-color: #6c7a70;
+  background: #f1f4ef;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+#generateButton {
+  background: #1f6f62;
+  border-color: #1f6f62;
+  color: #ffffff;
+}
+
+#generateButton:hover:not(:disabled) {
+  background: #195c52;
+  border-color: #195c52;
+}
+
+.card-output {
+  width: 100%;
+  min-height: 185px;
+  flex: 1;
+  resize: vertical;
+  border: 1px solid #cfd5ce;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #18202c;
+  padding: 10px;
+  line-height: 1.45;
+}
+
+.card-output:focus,
+button:focus-visible {
+  outline: 2px solid #2b8073;
+  outline-offset: 2px;
+}

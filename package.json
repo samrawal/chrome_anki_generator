@@ -1,0 +1,11 @@
+{
+  "name": "mksap-anki-cloze-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bridge": "node scripts/bridge.js",
+    "start": "sh scripts/start-local.sh",
+    "test": "node --test"
+  }
+}
