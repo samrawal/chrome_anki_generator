@@ -1,6 +1,9 @@
-# MKSAP Anki Cloze
+# Practice Question to Anki Cloze
+
+![MKSAP Anki Cloze screenshot](assets/screenshot_1.png)
 
 A minimal Chrome extension that reads the current MKSAP answer page and asks local Codex to generate one concise Anki cloze card.
+**soon:** *make extendable across all sites*
 
 ## What It Does
 
