@@ -17,6 +17,7 @@ pnpm-debug.log*
 dist/
 build/
 *.tgz
+demo_assets/
 
 # OS and editor files
 .DS_Store
