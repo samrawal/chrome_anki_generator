@@ -29,7 +29,7 @@ describe("bridgeClient.generateClozeCard", () => {
     assert.equal(cloze, "Use {{c1::spironolactone}} in selected HFrEF patients.");
   });
 
-  it("shows the bridge startup command when fetch fails", async () => {
+  it("shows friendly bridge startup instructions when fetch fails", async () => {
     await assert.rejects(
       () =>
         generateClozeCard(
@@ -40,7 +40,7 @@ describe("bridgeClient.generateClozeCard", () => {
             }
           }
         ),
-      /Start it with: npm start/
+      /Please start the MKSAP extension bridge.*run npm start/
     );
   });
 

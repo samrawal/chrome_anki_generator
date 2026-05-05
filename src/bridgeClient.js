@@ -20,7 +20,7 @@ export async function generateClozeCard(pageCapture, options = {}) {
     });
   } catch {
     throw new Error(
-      `Could not connect to the local MKSAP bridge at ${url}. Start it with: ${BRIDGE_START_COMMAND}`
+      `Please start the MKSAP extension bridge so this extension can communicate with Codex. In the repo, run ${BRIDGE_START_COMMAND}, then try generating the card again. Bridge URL: ${url}`
     );
   }
 
